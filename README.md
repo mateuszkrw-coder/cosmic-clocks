@@ -1,12 +1,20 @@
 # Cosmic Clocks
 
+<a href="https://mateuszkrw-coder.github.io/cosmic-clocks/docs/showreel.mp4">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="docs/showreel.png">
+    <img src="docs/showreel.avif" width="100%" alt="15-second showreel: a pulsar's beam sweeps past like a lighthouse, ticking at the star's true rate; the tuning dial spins it up from a heartbeat to 716 turns a second, where the ticks become a musical note; the camera flies out across the Milky Way to the twelve pulsars, stacks the first pulsar's single pulses and folds them into a clock, replays a supernova, a starquake and the Crab in the sky, and ends on the Cosmic Clocks title.">
+  </picture>
+</a>
+
+<sub>▶ [Watch the showreel in HD with sound](https://mateuszkrw-coder.github.io/cosmic-clocks/docs/showreel.mp4)
+(15 seconds, drawn in code from the site's own pulsar catalogue and pulse model, with a score tuned to the fastest pulsar's note: [how it's made](docs/showreel/))</sub>
+
 **Twelve dead stars that still keep perfect time.** An interactive listening room for pulsars:
 tune a radio dial across twelve real neutron stars, hear each one tick at its true rotation rate,
 and fly between them across a model of the Milky Way.
 
 ### ▶ [Try it live: mateuszkrw-coder.github.io/cosmic-clocks](https://mateuszkrw-coder.github.io/cosmic-clocks/)
-
-[![PSR J1748−2446ad, the fastest-spinning pulsar known, turning 716 times a second](docs/screenshots/02-j1748-fastest.jpg)](https://mateuszkrw-coder.github.io/cosmic-clocks/)
 
 Runs in any modern browser on desktop or phone. Press **Tune in with sound** and turn the volume up
 (headphones help with the slow ones). Nothing to install.
@@ -18,6 +26,9 @@ no server needed.
 ## Screenshots
 
 <table>
+<tr>
+<td colspan="2"><a href="https://mateuszkrw-coder.github.io/cosmic-clocks/#j1748"><img src="docs/screenshots/02-j1748-fastest.jpg" alt="PSR J1748−2446ad, the fastest-spinning pulsar known, turning 716 times a second"></a><br><sub><b>PSR J1748−2446ad</b>, the fastest spin known: 716 turns a second, which you hear as a note just above F5.</sub></td>
+</tr>
 <tr>
 <td width="50%"><img src="docs/screenshots/01-intro.jpg" alt="Start screen: 'Dead stars that still keep perfect time' over a model of the Milky Way"><br><sub><b>Start screen.</b> The twelve pulsars marked at their real positions in the galaxy.</sub></td>
 <td width="50%"><img src="docs/screenshots/05-galaxy-map.jpg" alt="Galaxy map with all twelve pulsars and the Sun labelled"><br><sub><b>Galaxy map.</b> Where each pulsar sits relative to the Sun. Switching stars flies you there.</sub></td>
@@ -142,6 +153,8 @@ js/app.js           state, navigation, controls
 tools/build.mjs     bundles everything into dist/cosmic-clocks.html
 tools/make-sky-data.mjs  regenerates js/sky-data.js from the d3-celestial package
 docs/screenshots/    the images in this README
+docs/showreel/       the showreel: drawn in code from js/, rendered by render.mjs
+docs/showreel.*      the rendered showreel: MP4 with sound, looping AVIF, poster
 ```
 
 Run `node tools/build.mjs` after editing to refresh the single-file bundle.
